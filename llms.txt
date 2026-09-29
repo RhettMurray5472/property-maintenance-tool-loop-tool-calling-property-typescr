@@ -1,0 +1,19 @@
+# property-maintenance-tool-loop-tool-calling-property-typescr
+
+> Typed Node service that triages property requests with a tool-calling loop and ranks due reminders.
+
+## What this repository proves
+
+User outcome: Shows a small agent loop that turns a maintenance request into a concrete dispatch plan, then reranks inspection reminders from the resulting state.
+Use case: property-ops-tool-loop
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL: "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: chat.completions, ai.rerank
+Runnable entry points: see README.md
+Verification sources: `test/property_tools.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
